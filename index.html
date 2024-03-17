@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="./assets/css/form.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body>
+    <h1>Welcome to My Blog</h1>
+
+    <div class="container">
+        <div class="form-container">
+            <form class="myForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="title">Article Title:</label>
+                <input type="text" id="title" name="title" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+
+                <input class="submit" type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="./assets/image.png" alt="Image">
+        </div>
+    </div>
+
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/blog.js"></script>
+</body>
+</html>
