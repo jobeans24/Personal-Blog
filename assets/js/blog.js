@@ -1,50 +1,33 @@
-// Get the form element from index.html
-const form = document.getElementById("myForm");
-
-// Add an event listener to the form submission
-if (form) {
-    form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Get the values entered in the form
-        const username = document.getElementById("username").value;
-        const articleTitle = document.getElementById("articleTitle").value;
-        const message = document.getElementById("message").value;
-
-        // Create a query string with the values
-        const queryString = `username=${encodeURIComponent(username)}&articleTitle=${encodeURIComponent(articleTitle)}&message=${encodeURIComponent(message)}`;
-
-        // Redirect to blog.html with the query string
-        window.location.href = `blog.html?${queryString}`;
-    });
+// Function to toggle between light and dark mode
+function toggleMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
 }
 
-const blogEntries = [];
+// Function to display submitted information by time of publishing
+function displaySubmittedInformation() {
+    // Get the form element
+    const form = document.getElementById("myForm");
 
-  // Sort blog entries by published time and date
-  blogEntries.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    // Get the input values
+    const username = form.elements["username"].value;
+    const articleTitle = form.elements["articleTitle"].value;
+    const message = form.elements["message"].value;
 
-  // Generate HTML for each blog entry
-  const blogEntriesContainer = document.getElementById("blogEntries");
-  blogEntries.forEach(entry => {
-    const entryElement = document.createElement("div");
-    entryElement.innerHTML = `
-      <h2>${entry.title}</h2>
-      <p>${entry.content}</p>
-        <p>Written by: ${entry.author}</p>
-      <p>Published at: ${new Date(entry.publishedAt).toLocaleString()}</p>
-      <hr>
+    // Get the current time
+    const currentTime = new Date().toLocaleTimeString();
+
+    // Create a new element to display the submitted information
+    const infoElement = document.createElement("div");
+    infoElement.innerHTML = `
+        <p>Username: ${username}</p>
+        <p>Article Title: ${articleTitle}</p>
+        <p>Message: ${message}</p>
+        <p>Time of Publishing: ${currentTime}</p>
     `;
-    blogEntriesContainer.appendChild(entryElement);
-  });
-    // Get the query string from the URL
-    const queryString = window.location.search;
 
-    // Create a new URLSearchParams object
-    const urlParams = new URLSearchParams(queryString);
+    // Append the new element to the body
+    document.body.appendChild(infoElement);
+}
 
-    // Get the values from the URL
-    const username = urlParams.get("username");
-    const articleTitle = urlParams.get("articleTitle");
-    const message = urlParams.get("message");
-
+displaySubmittedInformation(); // Call the function to display the submitted information by time of publishing

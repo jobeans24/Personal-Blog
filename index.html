@@ -8,10 +8,12 @@
 </head>
 <body>
     <h1>Welcome to My Blog</h1>
-
+<button id="mode-toggle" ondblclick="toggleMode()">
+    ☀️
+</button>
     <div class="container">
         <div class="form-container">
-            <form class="myForm">
+            <form id="myForm">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required><br><br>
 
@@ -25,7 +27,7 @@
             </form>
         </div>
         <div class="image-container">
-            <img src="./assets/image.png" alt="Image">
+            <img src="./assets/images/welcome.png" alt="Image">
         </div>
     </div>
 
