@@ -34,6 +34,17 @@ SO THAT I can showcase my thoughts and experiences
 
 
 ## Description
+  The website allows the user to put in their username, title of their blog as well as the message they want to include. Once the user submits the form they will be directed to the blog site and be able to see the post they submitted as well as any other posts that were made to the localStorage. 
+
+  There is a button in the top left corner that allows the user to change between light and dark mode. The modes will adjust all backgrounds and container properties to match the mode that was selected. The button is programmed to be a double click therefore the user has to doubleclick the sun to be able to change the screen mode.
 
 
 ## Images
+Starting Page
+![alt text](./assets/images/openningindex.png)
+
+Dark Mode Starting Page
+![alt text](./assets/images/darkmodestart.png)
+
+Blog Page 
+![alt text](./assets/images/blog.png)
