@@ -4,6 +4,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
   padding: 0;
 }
 
+
+
 /* Set default font and colors */
 body {
   font-family: Arial, sans-serif;
@@ -46,6 +48,31 @@ nav ul li a {
 main {
   padding: 20px;
 }
+/* Blog entries styles */
+#blogEntries {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: #444 0px 0px 10px;
+}
+/* Blog entries styles */
+#blogEntries .submitted-info {
+    font-size: 14px;
+    color: #666;
+    text-indent: 20px;
+    font-style: italic;
+}
+
+
+/* Blog entries styles */
+#blogEntries .submitted-info {
+    font-size: 14px;
+    color: #666;
+
+}
+
+
+
 
 /* Footer styles */
 footer {
@@ -91,6 +118,24 @@ footer {
 .dark-mode .form-button:hover {
     background-color: #444;
 }
+/* Light mode */
+#blogEntries.light-mode {
+  background-color: #f2f2f2;
+}
+
+#blogEntries.light-mode .submitted-info {
+  color: #666;
+}
+
+/* Dark mode */
+#blogEntries.dark-mode {
+  background-color: #333;
+}
+
+#blogEntries.dark-mode .submitted-info {
+  color: #999;
+}
+
 
 /* Positioning light and dark mode buttons */
 button.mode-toggle {

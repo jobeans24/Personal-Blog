@@ -3,6 +3,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     window.location.href = 'blog.html';
 });
 
+
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -17,3 +18,5 @@ document.querySelector('form').addEventListener('submit', function(event) {
     
     window.location.href = 'blog.html';
 });
+
+

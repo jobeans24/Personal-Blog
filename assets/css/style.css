@@ -4,8 +4,8 @@
   --text-color: #333;
 }
 
-.container {
-  display: flex;
+.container { 
+  display: flex; 
 }
 
 .form-container {
@@ -111,4 +111,6 @@ button.mode-toggle {
     text-align: center;
     font-size: 14px;
     color: #666;
+    position: relative;
+    bottom: 0;
   }
